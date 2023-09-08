@@ -66,41 +66,41 @@
 # if name and age >= 18 and has_driver_licence:
 #     print(f"User {name} can rent a car")
 
-# Тернарні операції
-is_nice = True
-state = "nice" if is_nice else "not nice"
+# # Тернарні операції
+# is_nice = True
+# state = "nice" if is_nice else "not nice"
 
-# коротший варіант тернарного оператора
-some_data = None
-msg = some_data or "Не було повернено даних"
+# # коротший варіант тернарного оператора
+# some_data = None
+# msg = some_data or "Не було повернено даних"
 
-# Блоки інструкцій
-x = int(input("X: "))
-y = int(input("Y: "))
+# # Блоки інструкцій
+# x = int(input("X: "))
+# y = int(input("Y: "))
 
-if x == 0:
-    print("X can`t be equal to zero")
-    x = int(input("X: "))
+# if x == 0:
+#     print("X can`t be equal to zero")
+#     x = int(input("X: "))
 
-result = y / x
+# result = y / x
 
-# Для виділення декілька рівнів вкладеності, додаючи ще 4 пробіли зліва для всіх інструкцій блоку:
-x = int(input("X: "))
-y = int(input("Y: "))
+# # Для виділення декілька рівнів вкладеності, додаючи ще 4 пробіли зліва для всіх інструкцій блоку:
+# x = int(input("X: "))
+# y = int(input("Y: "))
 
-if x == 0:
-    print("X can`t be equal to zero")
-    x = int(input("X: "))
+# if x == 0:
+#     print("X can`t be equal to zero")
+#     x = int(input("X: "))
 
-    if x == 0:
-        print("X can`t be equal to zero")
-        x = int(input("X: "))
+#     if x == 0:
+#         print("X can`t be equal to zero")
+#         x = int(input("X: "))
 
-        if x == 0:
-            print("X can`t be equal to zero")
-            x = int(input("X: "))
+#         if x == 0:
+#             print("X can`t be equal to zero")
+#             x = int(input("X: "))
 
-result = y / x
+# result = y / x
 
 # # Приклад вкладеності для визначення чвертей для координатної площини.
 
