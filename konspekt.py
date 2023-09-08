@@ -115,3 +115,8 @@
 #     else:                    # x < 0, y < 0
 #         print("Третя чверть")
 
+# # Цикл for
+# fruit = 'apple'
+# for char in fruit:
+#     print(char)
+
