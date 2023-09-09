@@ -176,8 +176,8 @@
 # finally:
 #     print("This will be printed anyway")
 
-# Механізм обробки винятків
-age = input("How old are you? ")
+# # Механізм обробки винятків
+# age = input("How old are you? ")
 # try:
 #     age = int(age)
 #     if age >= 18:
