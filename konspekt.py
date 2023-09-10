@@ -174,6 +174,24 @@
 #     break
 
 # # Винятки
+# while True:
+#     user_name = input('Enter number: ')  # якщо буде введено не цифру
+#     try:
+#         x = int(user_name)
+#     except ValueError:                # можна прописувати декілька помилок зразу (ValueError, TypeError)
+#         print('Should be a number. Please try again!')
+#         continue
+#     break
+
+# while True:
+#     user_name = input('Enter number: ')  # якщо буде введено не цифру
+#     try:
+#         x = int(user_name)
+#     except ValueError as error:          # якщо потрібно вивести тип помилки
+#         print(error)
+#         continue
+#     break
+
 # val = 'a'
 # try:
 #     val = int(val)
@@ -183,6 +201,10 @@
 #     print(val > 0)
 # finally:
 #     print("This will be printed anyway")
+
+# age = int(input('Your age : '))      # примусовий виклик виключення
+# if age < 0: 
+#     raise ValueError('Wrong age.') 
 
 # # Механізм обробки винятків
 # age = input("How old are you? ")
