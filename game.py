@@ -1,17 +1,24 @@
+from random import randint
+
 SIZE_N = 5
 SIZE_M = 5
 
-char_x = 1
-char_y = 1
+char_x = randint(0, SIZE_N - 1)
+char_y = randint(0, SIZE_M - 1)
+char_sign = 'X'
 
-exit_x = 4
-exit_y = 4
+exit_x = randint(0, SIZE_N - 1)
+exit_y = randint(0, SIZE_M - 1)
 
-
+turns = 0
 
 while True:
 
     world_map = ''
+    win_condition = char_x == exit_x and char_y == exit_y
+
+    if win_condition:
+        char_sign = 'W'
 
     for j in range(SIZE_M):
         row = '|'
@@ -19,7 +26,7 @@ while True:
         for i in range(SIZE_N):
         
             if char_x == i and char_y == j:
-                row += 'X|'
+                row += f'{char_sign}|'
             elif exit_x == i and exit_y == j:
                 row += 'O|'
             else:
@@ -28,6 +35,10 @@ while True:
         world_map += f'{row}\n'
     
     print(world_map)
+   
+    if win_condition:
+        print(f'You WON in {turns} turns!')
+        break
 
     direction = input('Enter direction (u / d / l / r): ')
 
@@ -39,6 +50,5 @@ while True:
         char_x -= 1
     elif direction == 'r' and char_x < SIZE_N - 1:
         char_x += 1
-    
-  
 
+    turns += 1
