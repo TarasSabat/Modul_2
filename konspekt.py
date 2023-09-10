@@ -1,9 +1,11 @@
 # name = input("What is your name? ")
 # print(f"Hello {name}")
 
-# # Умовне виконання
-# age = input("How old are you? ")
+# # Умовне виконання (Conditional statement)
+# if bool(True):   # завжди bool
+#     print('Hello')
 
+# age = input("How old are you? ")
 # if int(age) >= 18:
 #     print("You are adult already.")
 # else:
@@ -58,7 +60,7 @@
 
 # # - все інше приводиться до True
 
-# # Булева алгебра
+# # Булева алгебра. Логічні оператори (Logical operators)
 # name = "Taras"
 # age = 22
 # has_driver_licence = True
@@ -66,7 +68,11 @@
 # if name and age >= 18 and has_driver_licence:
 #     print(f"User {name} can rent a car")
 
-# # Тернарні операції
+# # Тернарні операції (Inline conditional statement)
+# age = 23
+# adult = True if age >= 18 else False
+# print(adult)
+
 # is_nice = True
 # state = "nice" if is_nice else "not nice"
 
@@ -103,7 +109,6 @@
 # result = y / x
 
 # # Приклад вкладеності для визначення чвертей для координатної площини.
-
 # if x >= 0:
 #     if y >= 0:               # x > 0, y > 0
 #         print("Перша чверть")
@@ -115,16 +120,19 @@
 #     else:                    # x < 0, y < 0
 #         print("Третя чверть")
 
-# # Цикл for
+# # Цикл for (для)
 # fruit = 'apple'
 # for char in fruit:
 #     print(char)
 
-# # Цикл while
+# # Цикл while (поки)
+# while True: 
+#     print('Hello')  # безскінчений цикл
+
 # a = 1
 # while a <= 5:
 #     print(a)
-#     a = a + 1
+#     a = a + 1     # аналогічно a += 1
 
 # # «Нескінченні цикли» та break
 # a = 0
