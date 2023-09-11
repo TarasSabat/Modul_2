@@ -129,6 +129,16 @@
 # while True: 
 #     print('Hello')  # безскінчений цикл
 
+# counter = 0
+# while True:  # counter < 5
+#     user_input = input('>>> ')
+#     counter += 1
+#     if user_input == 'exit' or counter >= 5:
+#         print('Goodby.')
+#         break
+#     else:
+#         print(f'You write: {user_input}')
+
 # a = 1
 # while a <= 5:
 #     print(a)
@@ -205,6 +215,21 @@
 # age = int(input('Your age : '))      # примусовий виклик виключення
 # if age < 0: 
 #     raise ValueError('Wrong age.') 
+
+# while True:
+#     age = input('How old are you? ')
+#     try:
+#         age = int(age)
+#         if age >= 18:
+#             print('Access allowed')
+#             break
+#         else:
+#             print('Access denied')
+#             break
+#     except ValueError:
+#         print(f'{age} is not a number. Please write number!')
+#     finally:
+#         print('-'*30)
 
 # # Механізм обробки винятків
 # age = input("How old are you? ")
