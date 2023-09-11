@@ -61,37 +61,19 @@
 Підказка: перевірка на парність виконується порівнянням залишку від поділу на 2 з 0 або 1. 
 Нагадаємо, залишок від ділення можна отримати після операції %
 '''
-num = int(input("Введіть число: "))
+# num = int(input("Enter a number: "))
 
-if num > 0:
-    if num >= 100:
-        result = "Додатне більше 100"
-    else:
-        result = "Додатне менше 100"
-elif num < 0:
-    result = "Число від'ємне"
-else:
-    result = "Це ноль"
+# if num > 0:
+#     if num % 2 == 0:
+#         result = "Positive even number"
+#     else:
+#         result = "Positive odd number"
+# elif num < 0:
+#     result = "Negative number"
+# else:
+#     result = "It is zero"
 
-print(result)
+# print(result)
 
-
-
-num = int(input("Enter a number: "))
-
-if
-    if
-        result = "Positive odd number"
-    else:
-        result = "Positive even number"
-elif
-    result = "Negative number"
-else:
-    result = "It is zero"
-
-
-
-
-
-
+'''
 
