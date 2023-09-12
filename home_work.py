@@ -89,19 +89,41 @@ x2 = (-b - D0.5) / (2 · a)
 в залежності від того додатне чи від'ємне, провести розрахунок коренів. 
 Виконайте розрахунок коренів для довільних значень коефіцієнтів a, b, c.
 '''
-import math
+# import math
 
-a = int(input("Enter coefficient a: "))
-b = int(input("Enter coefficient b: "))
-c = int(input("Enter coefficient c: "))
+# a = int(input("Enter coefficient a: "))
+# b = int(input("Enter coefficient b: "))
+# c = int(input("Enter coefficient c: "))
 
-D = b ** 2 - 4 * a * c
+# D = b ** 2 - 4 * a * c
 
-if D >= 0:
-    x1 = (-b + math.sqrt(D)) / (2 * a)
-    x2 = (-b - math.sqrt(D)) / (2 * a)
-    print(x1)
-    print(x2)
-if D < 0:
-    print('D negative')
+# if D >= 0:
+#     x1 = (-b + math.sqrt(D)) / (2 * a)
+#     x2 = (-b - math.sqrt(D)) / (2 * a)
+#     print(x1)
+#     print(x2)
+# if D < 0:
+#     print('D negative')
 
+'''
+Виконайте завдання, щоб визначити парне число чи ні, за допомогою тернарного оператора.
+Програма встановлює значення змінної is_even у True або False, 
+залежно від того, чи є число в змінній num парним або непарним.
+Підказка: перевірка на парність виконується порівнянням залишку від поділу на 2 з 0 або 1. 
+Нагадаємо, залишок від ділення можна отримати після операції %
+'''
+# num = int(input("Enter an integer number: "))
+
+# is_even = True if num % 2 == 0 else False
+# print(is_even)
+'''
+Користувач вводить число від 0 до 100. Підрахуйте, використовуючи цикл while, 
+суму всіх чисел від першого до введеного числа включно в num. Результат помістити в змінну sum.
+Тести будуть:
+Поміщати тестові значення для змінної num: 20, 10, 5, 100
+І чекати суми в змінній sum: 210, 55, 15, 5050
+'''
+num = int(input("Enter the integer (0 to 100): "))
+sum = 0
+
+while  
