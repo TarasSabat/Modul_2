@@ -123,7 +123,7 @@
 # # Цикл for (для)
 # fruit = 'apple'
 # for char in fruit:
-#     print(char)
+#     print(char, end = ' ')   # end = " " - вилаштовує результат в рядок
 
 # # Цикл while (поки)
 # while True: 
@@ -145,7 +145,7 @@
 #     a = a + 1     # аналогічно a += 1
 
 # # «Нескінченні цикли» та break
-# a = 0
+# a = 1
 # while True:
 #     print(a)
 #     if a >= 20:
@@ -160,12 +160,12 @@
 #         break
 
 # # Завершення ітерації за допомогою continue
-# a = 0
-# while a < 6:
-#     a = a + 1
-#     if not a % 2:
-#         continue
-#     print(a)
+a = 0
+while a < 6:
+    a = a + 1
+    if not a % 2:
+        continue
+    print(a)
 
 # # Оператори continue та break працюють тільки всередині одного циклу. 
 # # В ситуації вкладених циклів немає способу вийти з усіх циклів одразу.
@@ -228,8 +228,8 @@
 #             break
 #     except ValueError:
 #         print(f'{age} is not a number. Please write number!')
-#     finally:
-#         print('-'*30)
+#     finally:                      # finally виконується завжди
+#         print('-'*30) 
 
 # # Механізм обробки винятків
 # age = input("How old are you? ")
