@@ -123,26 +123,111 @@ x2 = (-b - D0.5) / (2 · a)
 Поміщати тестові значення для змінної num: 20, 10, 5, 100
 І чекати суми в змінній sum: 210, 55, 15, 5050
 '''
-num = int(input("Enter the integer (0 to 100): "))
-sum = 0
-count = 0
+# num = int(input("Enter the integer (0 to 100): "))
+# sum = 0
+# count = 0
 
-while count <= num:
-    sum += count  
-    count += 1    
-print(sum)  
+# while count <= num:
+#     sum += count  
+#     count += 1    
+# print(sum)  
 '''
 Рядок — це об'єкт, що ітерується, а, значить, ми можемо використовувати його в циклі for. 
 Підрахуйте в заданому рядку message кількість входжень символу зі змінної search. 
 Результат помістіть у змінну result.
 '''
-message = "Never argue with stupid people, they will drag you down to their level and then beat you with experience."
-search = "r"
-result = 0
+# message = "Never argue with stupid people, they will drag you down to their level and then beat you with experience."
+# search = "r"
+# result = 0
 
-for 'r' in "Never argue with stupid people, they will drag you down to their level and then beat you with experience."   
-          
-           
-            
+# for search2 in message:
+#     if search2 == search:
+#         result += 1
+# print(result)
+# print(search2)
+'''
+На співбесідах часто люблять запитувати про алгоритми. Наприклад, розрахуйте найбільший спільний дільник 
+(НД) двох додатних чисел. НСД — це найбільше число, на яке без залишку діляться обидва числа.
+Є кілька алгоритмів знаходження НСД, але ми розберемо циклічний алгоритм. Хай є два початкових числа 
+first та second. Виберемо менше з них та привласнимо значення змінній gcd. Поки first або second не діляться
+на gcd без залишку, треба виконувати цикл, в якому зменшуємо змінну gcd на одиницю. Коли цикл закінчиться 
+в змінній gcd буде НСД для чисел first та second 
+Напишіть програму, яка для двох додатних цілих чисел знаходить НСД.
+Примітка: Для умови циклу в пункті 3 необхідно пам'ятати, що цикл while виконується за умови True, 
+а наш цикл повинен закінчитися, тільки якщо gcd поділив обидва числа без залишку.
+'''
+# first = int(input("Enter the first integer: "))
+# second = int(input("Enter the second integer: "))
 
-      
+# gcd = 0
+
+# if first < second:
+#     gcd = first
+# else:
+#     gcd = second
+
+# while second % gcd != 0 or first % gcd != 0:
+#     gcd -= 1
+
+# print(gcd)
+'''
+Напишіть два цикли, вкладені один в один. У першому циклі while ми постійно запитуємо ціле число, 
+а у другому з допомогою циклу for складаємо суму чисел від 0 до введеного числа включно 
+і додаємо до змінної sum. Змінна sum накопичує суми, що утворюються при кожному введенні числа. 
+Вихід з першого циклу здійснюємо, якщо ми ввели число 0.
+Тести використовують дві тестові послідовності чисел:
+10, 13, 73, 0 і чекають на суму 2847
+1, 2, 3, 4, 0 і чекають на суму 20
+'''
+# num = int(input("Enter integer (0 for output): "))
+# sum = 0
+
+# while num != 0:
+#     for i in range(num + 1):
+#         sum += num
+#         num -= 1
+#     num = int(input("Enter integer (0 for output): "))
+# print(sum)
+'''
+Перепишіть попередній приклад, але використовуючи оператор break.
+Напишіть два подвійні цикли. У першому циклі while ми постійно запитуємо ціле число, 
+а у другому за допомогою циклу for обчислюємо суму чисел від 0 до введеного числа. 
+Вихід з першого циклу здійснюємо, якщо ввели число 0, за допомогою оператора break.
+Тести використовують дві тестові послідовності чисел:
+10, 13, 73, 0 і чекають на суму 2847
+1, 2, 3, 4, 0 і чекають на суму 20
+'''
+# sum = 0
+
+# while True:    
+#     num = int(input("Enter integer (0 for output): "))
+#     if num == 0:
+#         break
+#     else:        
+#         for i in range(num + 1):
+#             sum = sum + i
+#             i -= 1
+# print(sum)
+'''
+Повернемося знову до нашого попереднього завдання.
+Напишіть два подвійні цикли. У першому циклі while ми постійно запитуємо ціле число, 
+а у другому за допомогою циклу for обчислюємо суму парних чисел від 0 до введеного числа. 
+Вихід з першого циклу здійснюємо, якщо ввели число 0 за допомогою оператора break.
+Тести використовують дві тестові послідовності чисел:
+10, 13, 73, 0 і чекають на суму 1404
+1, 2, 3, 4, 0 і чекають на суму 10   
+'''
+sum = 0
+while True:
+    num = int(input("Enter integer (0 for output): "))
+    if num == 0:
+        break
+    for i in range(num + 1):
+        if i % 2 == 1:
+            continue
+        sum = sum + i
+print(sum)
+
+
+    
+

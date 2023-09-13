@@ -145,6 +145,24 @@
 #     print(a)
 #     a = a + 1     # аналогічно a += 1
 
+# num = int(input("Введіть число (0 для виходу): "))
+
+# while num != 0:
+#     repeat = int(input("Скільки разів помножити число на 2? "))
+#     for i in range(repeat):
+#         num = num * 2
+#     print(num)
+#     num = int(input("Введіть число (0 для виходу): "))
+
+# while True:
+#     num = int(input("Введіть число (0 для виходу): "))
+#     if num == 0:
+#         break
+#     repeat = int(input("Скільки разів помножити число на 2? "))
+#     for i in range(repeat):
+#         num = num * 2
+#     print(num)
+
 # # «Нескінченні цикли» та break
 # a = 1
 # while True:
@@ -161,6 +179,12 @@
 #         break
 
 # # Завершення ітерації за допомогою continue
+# num = 10
+# for variable in range(num):
+#     if variable % 2 == 1:
+#         continue
+#     print(variable)
+
 # a = 0
 # while a < 6:
 #     a = a + 1
