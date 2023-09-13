@@ -217,16 +217,72 @@ first та second. Виберемо менше з них та привласни
 10, 13, 73, 0 і чекають на суму 1404
 1, 2, 3, 4, 0 і чекають на суму 10   
 '''
-sum = 0
-while True:
-    num = int(input("Enter integer (0 for output): "))
-    if num == 0:
-        break
-    for i in range(num + 1):
-        if i % 2 == 1:
-            continue
-        sum = sum + i
-print(sum)
+# sum = 0
+# while True:
+#     num = int(input("Enter integer (0 for output): "))
+#     if num == 0:
+#         break
+#     for i in range(num + 1):
+#         if i % 2 == 1:
+#             continue
+#         sum = sum + i
+# print(sum)
+'''
+Код Цезаря
+ord('a') # 97
+chr(118) # 'v'
+
+pos = ord(v) - ord('a) # 21 # позиція символу 'a' відносно символу 'v'
+
+pos = ord('v') - ord('a')  # 21
+pos = (pos + 33) % 26  # 2  # з врахуванням зсуву н.п. 33
+
+Залишився останній крок, отримати новий символ:
+pos = ord('v') - ord('a')  # 21
+pos = (pos + 33) % 26  # 2
+new_char = chr(pos + ord("a"))  # 'c'
+
+Тести перевіряють та кодують наступні рядки:
+"Hello my little friends!", offset = 37,
+"Hello world!", offset = 7
+'''
+# Result 1
+message = input("Enter a message: ")
+offset = int(input("Enter the offset: "))
+encoded_message = ""
+for ch in message:
+    if ch.isalpha():
+        if ch.islower():
+            pos = ord(ch) - ord('a')
+            pos = (pos + offset) % 26  
+            new_char = chr(pos + ord("a"))
+            encoded_message += new_char
+        else:
+            pos = ord(ch) - ord('A')
+            pos = (pos + offset) % 26  
+            new_char = chr(pos + ord("A"))
+            encoded_message += new_char
+    else:
+        encoded_message += ch
+print(encoded_message, end = ' ')
+         
+# Result 2
+message = input("Enter a message: ")
+offset = int(input("Enter the offset: "))
+encoded_message = ""
+for ch in message:
+    if ch.isalpha():
+        is_upper = ch.isupper()
+        ch = ch.lower()
+        pos = ord(ch) - ord('a')
+        new_pos = (pos + offset) % 26
+        new_ch = chr(new_pos + ord('a'))
+        if is_upper:
+            new_ch = new_ch.upper()
+        encoded_message += new_ch
+    else:
+        encoded_message += ch
+print(encoded_message, end = ' ')
 
 
     

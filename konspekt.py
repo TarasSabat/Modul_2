@@ -121,10 +121,10 @@
 #     else:                    # x < 0, y < 0
 #         print("Третя чверть")
 
-# # Цикл for (для)
-# fruit = 'apple'
-# for char in fruit:
-#     print(char, end = ' ')   # end = " " - вилаштовує результат в рядок
+# Цикл for (для)
+fruit = 'apple'
+for char in fruit:
+    print(char, end = ' ')   # end = " " - вилаштовує результат в рядок
 
 # # Цикл while (поки)
 # while True: 
