@@ -125,5 +125,24 @@ x2 = (-b - D0.5) / (2 · a)
 '''
 num = int(input("Enter the integer (0 to 100): "))
 sum = 0
+count = 0
 
-while  
+while count <= num:
+    sum += count  
+    count += 1    
+print(sum)  
+'''
+Рядок — це об'єкт, що ітерується, а, значить, ми можемо використовувати його в циклі for. 
+Підрахуйте в заданому рядку message кількість входжень символу зі змінної search. 
+Результат помістіть у змінну result.
+'''
+message = "Never argue with stupid people, they will drag you down to their level and then beat you with experience."
+search = "r"
+result = 0
+
+for 'r' in "Never argue with stupid people, they will drag you down to their level and then beat you with experience."   
+          
+           
+            
+
+      
