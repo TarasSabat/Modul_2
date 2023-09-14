@@ -246,44 +246,197 @@ new_char = chr(pos + ord("a"))  # 'c'
 "Hello my little friends!", offset = 37,
 "Hello world!", offset = 7
 '''
-# Result 1
-message = input("Enter a message: ")
-offset = int(input("Enter the offset: "))
-encoded_message = ""
-for ch in message:
-    if ch.isalpha():
-        if ch.islower():
-            pos = ord(ch) - ord('a')
-            pos = (pos + offset) % 26  
-            new_char = chr(pos + ord("a"))
-            encoded_message += new_char
-        else:
-            pos = ord(ch) - ord('A')
-            pos = (pos + offset) % 26  
-            new_char = chr(pos + ord("A"))
-            encoded_message += new_char
-    else:
-        encoded_message += ch
-print(encoded_message, end = ' ')
+# # Result 1
+# message = input("Enter a message: ")
+# offset = int(input("Enter the offset: "))
+# encoded_message = ""
+# for ch in message:
+#     if ch.isalpha():
+#         if ch.islower():
+#             pos = ord(ch) - ord('a')
+#             pos = (pos + offset) % 26  
+#             new_char = chr(pos + ord("a"))
+#             encoded_message += new_char
+#         else:
+#             pos = ord(ch) - ord('A')
+#             pos = (pos + offset) % 26  
+#             new_char = chr(pos + ord("A"))
+#             encoded_message += new_char
+#     else:
+#         encoded_message += ch
+# print(encoded_message, end = ' ')
          
 # Result 2
-message = input("Enter a message: ")
-offset = int(input("Enter the offset: "))
-encoded_message = ""
-for ch in message:
-    if ch.isalpha():
-        is_upper = ch.isupper()
-        ch = ch.lower()
-        pos = ord(ch) - ord('a')
-        new_pos = (pos + offset) % 26
-        new_ch = chr(new_pos + ord('a'))
-        if is_upper:
-            new_ch = new_ch.upper()
-        encoded_message += new_ch
-    else:
-        encoded_message += ch
-print(encoded_message, end = ' ')
+# message = input("Enter a message: ")
+# offset = int(input("Enter the offset: "))
+# encoded_message = ""
+# for ch in message:
+#     if ch.isalpha():
+#         is_upper = ch.isupper()
+#         ch = ch.lower()
+#         pos = ord(ch) - ord('a')
+#         new_pos = (pos + offset) % 26
+#         new_ch = chr(new_pos + ord('a'))
+#         if is_upper:
+#             new_ch = new_ch.upper()
+#         encoded_meisssage += new_ch
+#     else:
+#         encoded_message += ch
+# print(encoded_message, end = ' ')
+
+# # Result 3
+# message = input("Enter a message: ")
+# offset = int(input("Enter the offset: "))
+# encoded_message = ""
+# for ch in message:
+#     if ch.isalpha():
+#         if ch.isupper():
+#             pos = ord(ch) - ord('A')
+#             pos = (pos + offset) % 26  
+#             new_char = chr(pos + ord("A"))
+#             encoded_message += new_char
+#         else:
+#             pos = ord(ch) - ord('a')
+#             pos = (pos + offset) % 26  
+#             new_char = chr(pos + ord("a"))
+#             encoded_message += new_char
+#     else:
+#         encoded_message += ch
+# print(encoded_message, end = ' ')
+'''
+Ситуація проста, вам необхідно вирахувати кількість SMS, які треба надсилати в одному пакеті 
+розсилки потенційним покупцям. Всього на день виділяється 1000 платних SMS для кампанії маркетингу 
+pool=1000. Співробітник відділу маркетингу вводить кількість розсилок quantity, 
+і ви обчислюєте розмір пакета chunk = pool // quantity. Опрацюйте помилку поділу на нуль.
+'''
+# #Мій варіант
+# pool = 1000
+# quantity = int(input("Enter the number of mailings: "))
+
+# while True:
+#     if quantity > 0:
+#         chunk = pool // quantity
+#         print(chunk)
+#         break
+#     try:
+#         chunk = pool // quantity
+#     except ZeroDivisionError:
+#         quantity = int(input('Division by zero is impossible.! Enter a number greater than zero: '))
+
+## Правильний варіант
+# pool = 1000
+# quantity = int(input("Enter the number of mailings: "))
+
+# try:
+#     chunk = pool // quantity
+#     print(chunk)
+
+# except ZeroDivisionError:
+#     print('Divide by zero completed!')
+'''
+Напишіть програму, яка буде виконувати найпростіші математичні операції з числами послідовно, 
+приймаючи від користувача операнди (числа) та оператор.
+Умови для цієї задачі
+Додаток працює з цілими та дійсними числами.
+Додаток вміє виконувати такі математичні операції:
+ДОДАВАННЯ (+)
+ВІДНІМАННЯ(-)
+МНОЖЕННЯ (*)
+ДІЛЕННЯ (/)
+Програма приймає один операнд або один оператор за один цикл запит-відповідь.
+Всі операції програма виконує в порядку надходження — одну за одною.
+Програма виводить результат обчислень, коли отримує від користувача символ =.
+Додаток закінчує роботу після того, як виведе результат обчислення.
+Користувач по черзі вводить числа та оператори.
+Якщо користувач вводить оператор двічі поспіль, він отримує повідомлення про помилку і може ввести повторно.
+Якщо користувач вводить число двічі поспіль, він отримує повідомлення про помилку і може ввести повторно.
+Додаток коректно опрацьовує ситуацію некоректного введення (exception).
+Початкові змінні:
+result = None
+operand = None
+operator = None
+wait_for_number = True
+result — сюди поміщаємо підсумковий результат operand — завжди зберігає поточне число 
+operator — рядковий параметр, може містити чотири значення, "+", "-", "*", "/" 
+wait_for_number — прапорець, який вказує, що очікують на вводі оператор (operator) 
+або операнд (operand)
+Приклад виконання програми:
+>>> 3
+>>> +
+>>> 3
+>>> 2
+2 is not '+' or '-' or '/' or '*'. Try again
+>>> -
+>>> -
+'-' is not a number. Try again.
+>>> 5
+>>> *
+>>> 3
+>>> =
+Result: 3.0
+Тестові послідовності:
+Перша: ["10", "+", "5", "6", "/", "3", "-", "a", "2", "*", "6", "= "], результат 18.0
+Друга: ["2", "3", "-", "1", "+", "10", "*", "2", "="], результат 22.0
+'''
+result = 0
+operand = 0
+# operand_2 = 0
+operator = 0
+wait_for_number = 0
+
+while True:
+    wait_for_number = input('>>> ')
+    if wait_for_number == '=':
+           print(result)
+           break
+    if wait_for_number.isdigit():
+           operand = int(wait_for_number)
+    elif wait_for_number in ('+', '-', '/', '*'): 
+           print(f'{wait_for_number} is not a number. Try again.') 
+    
+           
+           
+
+    
+ 
 
 
     
+    # operand_1 = input('operand_1>>> ')
+    # operator = (input('operator>>> '))
+    # operand_2 = int(input('operand_2>>> '))
+    
+    # operand_1 = int(operand_1)
+    # operand_2 = int(operand_2)
+    # if operator == '+':
+    #         result += operand_1 + operand_2
+    # elif operator == '-':
+    #         result += operand_1 - operand_2
+    # elif operator == '/':
+    #         result += operand_1 / operand_2
+    # elif operator == '*':
+    #         result += operand_1 * operand_2
+    # if operator == '=':
+    #       print(result)
+
+
+
+    
+    # 
+        
+    # else: 
+    #     print(f'{operand_1} is not a number. Try again.') 
+    
+        
+    # elif 
+    #     print(f"{operator} is not '+' or '-' or '/' or '*'. Try again")
+
+#     
+#     
+#     
+
+
+
+
+
 
