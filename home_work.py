@@ -385,12 +385,47 @@ operator = 0
 wait_for_number = 0
 
 while True:
-    wait_for_number = input('>>> ')
-    if wait_for_number == '=':
+    if operand == 0:
+        wait_for_number = input('>>> ')    # 1) 1 digit
+        if wait_for_number == '=':
+            print(result)
+            break
+    
+    elif operator == 0:
+        wait_for_number = input('>>> ')
+        if wait_for_number == '=':
+            print(result)
+            break
+        elif wait_for_number in ('+', '-', '/', '*'):# перевірка чи цифра
+            operator = wait_for_number 
+        elif wait_for_number.isdigit():      # якщо цифра присвоєння operand
+             print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
+ 
+    if operand > 0:       # присвоєння 2 цифри
+        wait_for_number = input('>>> ')
+        wait_for_number = int(wait_for_number)
+                
+        wait_for_number = input('>>> ')
+    
+    
+    # if wait_for_number == '=':         # виведення result
+    #         print(result)
+    #         break
+    
+        
+    
+    elif wait_for_number.isdigit():
+        operand = int(wait_for_number)
+
+    elif wait_for_number in ('+', '-', '/', '*'):               # перевірка чи цифра
+        print(f'{wait_for_number} is not a number. Try again.') 
+
+    elif wait_for_number == '=':
            print(result)
            break
-    if wait_for_number.isdigit():
+    elif wait_for_number.isdigit():      # якщо цифра присвоєння operand
            operand = int(wait_for_number)
+
     elif wait_for_number in ('+', '-', '/', '*'): 
            print(f'{wait_for_number} is not a number. Try again.') 
     
