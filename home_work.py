@@ -305,6 +305,24 @@ new_char = chr(pos + ord("a"))  # 'c'
 #     else:
 #         encoded_message += ch
 # print(encoded_message, end = ' ')
+
+# # Result 4
+# message = input("Enter a message: ")
+# offset = int(input("Enter the offset: "))
+# encoded_message = ""
+# for ch in message:
+#     if "a" <= ch <= "z":
+#         pos = ord(ch) - ord('a')
+#         pos = (pos + offset) % 26
+#         new_char = chr(pos + ord("a"))
+#         encoded_message = encoded_message + new_char
+#     elif "A" <= ch <= "Z":
+#         pos = ord(ch) - ord('A')
+#         pos = (pos + offset) % 26
+#         new_char = chr(pos + ord("A"))
+#         encoded_message = encoded_message + new_char
+#     else:
+#         encoded_message = encoded_message + ch
 '''
 Ситуація проста, вам необхідно вирахувати кількість SMS, які треба надсилати в одному пакеті 
 розсилки потенційним покупцям. Всього на день виділяється 1000 платних SMS для кампанії маркетингу 
@@ -380,195 +398,43 @@ Result: 3.0
 Перша: ["10", "+", "5", "6", "/", "3", "-", "a", "2", "*", "6", "= "], результат 18.0
 Друга: ["2", "3", "-", "1", "+", "10", "*", "2", "="], результат 22.0
 '''
-## Мій варіант
-# result = 0
-# operand = 0
-# # operand_2 = 0
-# operator = 0
-# wait_for_number = 0
+## Варіант викладача
+# result = None
+# operand = None
+# operator = None
+# wait_for_number = True
 
 # while True:
-#     if operand == 0:
-#         wait_for_number = input('>>> ')    # 1) 1 digit
-#         if wait_for_number == '=':
-#             print(result)
-#             break
-#         elif wait_for_number.isdigit():
-#             operand = int(wait_for_number)
-#         elif wait_for_number in ('+', '-', '/', '*'):# перевірка чи цифра
-#             print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
- 
-#     if operand > 0:       # присвоєння 2 цифри
-#         wait_for_number = input('>>> ')
-#         if wait_for_number == '=':
-#             print(result)
-#             break
-#         elif wait_for_number.isdigit():
-#             wait_for_number = int(wait_for_number)
-#         elif wait_for_number in ('+', '-', '/', '*'):# перевірка чи цифра
-#             print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
-        
-        
-#         wait_for_number = int(wait_for_number)
-                
-#         wait_for_number = input('>>> ')
-    
-    
-   
-    
-#     elif operator == 0:
-#         wait_for_number = input('>>> ')
-#         if wait_for_number == '=':
-#             print(result)
-#             break
-        
-        
-#         elif wait_for_number.isdigit():      # якщо цифра присвоєння operand
-#              print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
- 
-    
-#     # if wait_for_number == '=':         # виведення result
-#     #         print(result)
-#     #         break
-    
-    
+#     user_input = input(">>> ")
+#     if user_input == "=":
+#         break
 
-#     elif wait_for_number in ('+', '-', '/', '*'):               # перевірка чи цифра
-#         print(f'{wait_for_number} is not a number. Try again.') 
-
-#     elif wait_for_number == '=':
-#            print(result)
-#            break
-#     elif wait_for_number.isdigit():      # якщо цифра присвоєння operand
-#            operand = int(wait_for_number)
-
-#     elif wait_for_number in ('+', '-', '/', '*'): 
-#            print(f'{wait_for_number} is not a number. Try again.') 
-    
-   
-    
-    # operand_1 = input('operand_1>>> ')
-    # operator = (input('operator>>> '))
-    # operand_2 = int(input('operand_2>>> '))
-    
-    # operand_1 = int(operand_1)
-    # operand_2 = int(operand_2)
-    # if operator == '+':
-    #         result += operand_1 + operand_2
-    # elif operator == '-':
-    #         result += operand_1 - operand_2
-    # elif operator == '/':
-    #         result += operand_1 / operand_2
-    # elif operator == '*':
-    #         result += operand_1 * operand_2
-    # if operator == '=':
-    #       print(result)
-
-    # 
-        
-    # else: 
-    #     print(f'{operand_1} is not a number. Try again.') 
-    
-        
-    # elif 
-    #     print(f"{operator} is not '+' or '-' or '/' or '*'. Try again")
-
- ## Варіант 2
-    
-result = 0
-operand = 0
-# operand_2 = 0
-operator = 0
-wait_for_number = 0
-
-while True:
-    if operand == 0:
-        wait_for_number = input('>>> ')    # 1) 1 digit
-        if wait_for_number == '=':
-            print(result)
-            break
-        elif wait_for_number.isdigit():
-            operand = int(wait_for_number)
-        elif wait_for_number in ('+', '-', '/', '*'):# перевірка чи цифра
-            print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
- 
-    if operand > 0:       # присвоєння 2 цифри
-        wait_for_number = input('>>> ')
-        if wait_for_number == '=':
-            print(result)
-            break
-        elif wait_for_number.isdigit():
-            wait_for_number = int(wait_for_number)
-        elif wait_for_number in ('+', '-', '/', '*'):# перевірка чи цифра
-            print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
-        
-        
-        wait_for_number = int(wait_for_number)
-                
-        wait_for_number = input('>>> ')
-    
-    
-   
-    
-    elif operator == 0:
-        wait_for_number = input('>>> ')
-        if wait_for_number == '=':
-            print(result)
-            break
-        
-        
-        elif wait_for_number.isdigit():      # якщо цифра присвоєння operand
-             print(f"{wait_for_number} is not '+' or '-' or '/' or '*'. Try again")
- 
-    
-    # if wait_for_number == '=':         # виведення result
-    #         print(result)
-    #         break
-    
-    
-
-    elif wait_for_number in ('+', '-', '/', '*'):               # перевірка чи цифра
-        print(f'{wait_for_number} is not a number. Try again.') 
-
-    elif wait_for_number == '=':
-           print(result)
-           break
-    elif wait_for_number.isdigit():      # якщо цифра присвоєння operand
-           operand = int(wait_for_number)
-
-    elif wait_for_number in ('+', '-', '/', '*'): 
-           print(f'{wait_for_number} is not a number. Try again.') 
-    
-   
-    
-    operand_1 = input('operand_1>>> ')
-    operator = (input('operator>>> '))
-    operand_2 = int(input('operand_2>>> '))
-    
-    operand_1 = int(operand_1)
-    operand_2 = int(operand_2)
-    if operator == '+':
-            result += operand_1 + operand_2
-    elif operator == '-':
-            result += operand_1 - operand_2
-    elif operator == '/':
-            result += operand_1 / operand_2
-    elif operator == '*':
-            result += operand_1 * operand_2
-    if operator == '=':
-          print(result)
-
-    
-        
-    else: 
-        print(f'{operand_1} is not a number. Try again.') 
-    
-        
-    elif 
-        print(f"{operator} is not '+' or '-' or '/' or '*'. Try again")
-
-
-
-
-
-
+#     if wait_for_number:
+#         try:
+#             operand = float(user_input)
+#         except ValueError:
+#             print(f'{user_input} is not a number')
+#             continue
+#         wait_for_number = False
+#         if result is None:
+#             result = operand
+#         else:
+#             if operator == "+":
+#                 result += operand
+#             elif operator == "-":
+#                 result -= operand
+#             elif operator == "*":
+#                 result *= operand
+#             elif operator == "/":
+#                 if operand == 0:
+#                     print('Division by zero')
+#                     continue
+#                 result /= operand
+#     else:
+#         if user_input in "+-*/":
+#             operator = user_input
+#             wait_for_number = True
+#         else:
+#             print(f'{user_input} is not "+", "-", "*", "/"')           
+      
+# print(result) 

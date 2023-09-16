@@ -192,6 +192,17 @@
 #         continue
 #     print(a)
 
+# Оператори continue та break працюють тільки всередині одного циклу. 
+# В ситуації вкладених циклів немає способу вийти з усіх циклів одразу.
+# while True:
+#     number = input("number = ")
+#     number = int(number)
+#     while True:
+#         print(number)
+#         number = number - 1
+#         if number < 0:
+#             break
+
 # # Оператори continue та break працюють тільки всередині одного циклу. 
 # # В ситуації вкладених циклів немає способу вийти з усіх циклів одразу.
 # while True:
