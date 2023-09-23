@@ -264,3 +264,17 @@
 #     if i % 2 == 1:
 #         print(' ' * ((n-i) // 2), end = '')
 #         print('#' * i)
+'''Визначення парне/непарне'''
+# number = 100
+# figure = int(input('Enter number: '))
+# a = figure % 2 == 0
+# if a:
+#     for i in range(0, number + 1, 2):
+#         if i == figure:
+#             print(f'Parne {i}')
+#             break
+# else:
+#     for i in range(1, number + 1, 2):
+#         if i == figure:
+#             print(f'Ne parne {i}')
+#             break
