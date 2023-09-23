@@ -12,7 +12,7 @@
 
 #     if len(user_pin) >= 4:
 #         if pin == user_pin:
-            
+
 #             amount = input('How much: ')
 
 #             if amount > 0:
@@ -37,7 +37,7 @@
 Через for
 '''
 # pin = '0123'
-# for i in range(3):   
+# for i in range(3):
 #     user_pin = input('Enter your pin: ')
 #     if len(user_pin) == 4 or len(user_pin) == 6:
 #         if pin == user_pin:
@@ -59,7 +59,7 @@
 # if n1 == n2:
 #     print('Yes')
 
-# else: 
+# else:
 #     print('No')
 '''
 Перевірити чи в 3-х значному числі всі цифри різні? І чи є тільки 2 однакових числа?
@@ -72,10 +72,10 @@
 #     n1 = int(num[0])
 #     n2 = int(num[1])
 #     n3 = int(num[2])
-    
+
 #     if n1 != n3 and n2 != n3 and n1 != n2:
 #         print('Усі цифри різні')
-        
+
 #     elif (n1 == n3 or n2 == n3 or n2 == n1) and not (n1 == n2 and n1 == n3):
 #         print('Є тільки дві однакові цифри')
 '''
@@ -94,8 +94,9 @@
 #     l = 0
 #     k = 0
 # print(k, l)
-
-# # swap
+'''
+# # swap (заміна місцями змінних)
+'''
 # baz = int(input("Enter a number: "))
 # foo = int(input("Enter a number: "))
 
@@ -202,7 +203,7 @@
 '''
 # Визначити, чи є введений користувачем рядок паліндромом (пробіли не враховуємо)
 '''
-## Варіант 1
+# Варіант 1
 # word= input("Введіть рядок: ")
 # word2 = word[::-1]
 # if word == word2:
@@ -210,11 +211,11 @@
 # else:
 #     print(False)
 
-## Варіант 2
+# Варіант 2
 # word = input("Enter word: ")
 # print(word == ''.join(reversed(word)))
 
-## Варіант 3
+# Варіант 3
 # word = input("Please enter word: ").lower()
 # while True:
 #     word = input("Please enter word: ").lower()
@@ -227,7 +228,7 @@
 #            pol = False
 #     break
 
-## Варіант 4
+# Варіант 4
 # pol = True
 # while True:
 #     word = input("Please enter word: ").lower()
@@ -255,3 +256,11 @@
 #         if i == figure:
 #             print(i)
 #             break
+
+'''Побудова трикутника'''
+# n = 6
+
+# for i in range (1, n+1):
+#     if i % 2 == 1:
+#         print(' ' * ((n-i) // 2), end = '')
+#         print('#' * i)
